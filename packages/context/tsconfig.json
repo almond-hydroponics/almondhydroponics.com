@@ -1,0 +1,8 @@
+{
+  "extends": "@almond/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}
