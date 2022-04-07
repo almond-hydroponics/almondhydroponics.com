@@ -1,4 +1,4 @@
-import { useState, MouseEvent } from 'react';
+import { useState, MouseEvent, MouseEventHandler } from 'react';
 import {
 	MenuItem,
 	Menu,
@@ -13,8 +13,8 @@ import {
 	ArrowDropUpTwoTone,
 	DateRangeTwoTone,
 } from '@mui/icons-material';
-import { SelectBoxProps } from '@components/atoms/SelectBox/interfaces';
-import fancyId from '@utils/fancyId';
+import { SelectBoxProps } from './interfaces';
+import { fancyId } from '@almond/utils/src';
 
 const SelectBox = ({
 	title,
@@ -40,14 +40,16 @@ const SelectBox = ({
 
 	const handleMenuItemClick = (
 		event: MouseEvent<HTMLElement>,
-		index: { group: number; item: number }
+		index: { group: number; item: number },
 	) => {
 		setSelectedIndex(() => index);
 		handleDateSelect(index);
 		setAnchorEl(null);
 	};
 
-	const renderMoreButton = (handleArrowClick) =>
+	const renderMoreButton = (
+		handleArrowClick: MouseEventHandler<SVGSVGElement> | undefined,
+	) =>
 		isSelectBoxOpen ? (
 			<ArrowDropUpTwoTone />
 		) : (

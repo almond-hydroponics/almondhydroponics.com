@@ -2,7 +2,7 @@
 import ReactGA from 'react-ga';
 
 /**
- * This function Initializes tracking Id for google analytics to push data
+ * This function Initializes tracking id for Google Analytics to push data
  * @returns void
  */
 export const initializeGA = (): void =>

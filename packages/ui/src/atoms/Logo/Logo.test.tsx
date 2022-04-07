@@ -12,7 +12,7 @@ describe.skip('Logo component', () => {
 			.create(
 				<ThemeProvider theme={getTheme('light')}>
 					<Logo />
-				</ThemeProvider>
+				</ThemeProvider>,
 			)
 			.toJSON();
 		expect(tree).toMatchSnapshot();

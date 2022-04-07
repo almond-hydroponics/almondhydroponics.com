@@ -6,7 +6,7 @@ import { Snackbar, useMediaQuery } from '@mui/material';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 // interfaces
 import { SnackMessageProps } from './interfaces';
-import { ComponentContext } from '@context/ComponentContext';
+import { ComponentContext } from '@almond/context';
 
 export const SnackBar = ({ snack }: SnackMessageProps): JSX.Element => {
 	const componentContext = useContext(ComponentContext);

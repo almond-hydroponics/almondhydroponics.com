@@ -1,4 +1,4 @@
-import roundDigit from '@utils/roundDigit';
+import { roundDigit } from './index';
 
 /**
  * This function formats the raw water level data into a single percentage

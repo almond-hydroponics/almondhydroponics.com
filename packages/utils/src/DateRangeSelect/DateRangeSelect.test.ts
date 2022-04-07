@@ -1,11 +1,15 @@
-// third party libraries
-import dayjs from '@utils/dayjsTime';
-// utils
-import getDateRange from '@utils/DateRangeSelect/index';
+import { dayjs } from '../index';
+import getDateRange from './index';
 
 describe('The getDateRange function', () => {
-	const startDate = (param) => dayjs().startOf(param).toISOString();
-	const endDate = (param) => dayjs().endOf(param).toISOString();
+	const startDate = (param: string) =>
+		dayjs()
+			.startOf(<any>param)
+			.toISOString();
+	const endDate = (param: string) =>
+		dayjs()
+			.endOf(<any>param)
+			.toISOString();
 	let DateRange;
 
 	const Range = {

@@ -1,5 +1,14 @@
-import dayjs from '@utils/dayjsTime';
-import { Schedule } from '@modules/timeSchedules/interfaces';
+import { dayjs } from './index';
+
+interface Schedule {
+	id?: string;
+	_id: string;
+	schedule: string;
+	enabled: boolean;
+	createdAt: string;
+	updatedAt: string;
+	user: string;
+}
 
 /**
  * This function validates the new time schedules to be one hour apart

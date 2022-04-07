@@ -31,7 +31,7 @@ describe('The SnackBar components', () => {
 		const { asFragment } = renderWithRedux(
 			<SnackBar {...props} />,
 			initialState,
-			store
+			store,
 		);
 		const { snack } = store.getState();
 

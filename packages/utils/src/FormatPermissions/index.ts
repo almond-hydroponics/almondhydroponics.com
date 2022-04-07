@@ -1,13 +1,11 @@
+import { camelCase } from '../index';
 // interfaces
-import { Permission, UserRole } from '@modules/userRoles/interfaces';
 import {
 	FormattedPermission,
 	FormattedPermissions,
-} from '@utils/FormatPermissions/interfaces';
-
-// helpers
-import camelCase from '@utils/camelCase';
-
+	Permission,
+	UserRole,
+} from './interfaces';
 // fixtures
 import { fullAccess, noAccess, noAccessPermissions } from './fixtures';
 

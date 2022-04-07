@@ -1,0 +1,38 @@
+{
+  "name": "@almond/context",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "lint": "TIMING=1 eslint src --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@almond/config": "*",
+    "@almond/tsconfig": "*",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "tsup": "^5.12.4",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "jest": {
+    "preset": "@almond/config/jest/node"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

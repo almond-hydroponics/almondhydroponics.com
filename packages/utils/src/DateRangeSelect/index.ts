@@ -1,10 +1,10 @@
 // third party libraries
-import dayjs from '@utils/dayjsTime';
+import { dayjs } from '../index';
 // interface
 import {
 	DateRanges,
 	Param,
-} from '@components/molecules/DateRangePicker/interfaces';
+} from '@almond/ui/src/molecules/DateRangePicker/interfaces';
 
 /**
  * This method return the data range
@@ -19,13 +19,77 @@ const getDateRange = (
 	range?: DateRanges,
 	currentDateInView?: (date: string) => any,
 ): any => {
-	const Range = (date, rangeValue) => {
+	const Range = (date: string, rangeValue: string) => {
 		if (currentDateInView) {
 			currentDateInView(date);
 		}
 		return {
-			endDate: dayjs().endOf(rangeValue).unix(),
-			startDate: dayjs().startOf(rangeValue).unix(),
+			endDate: dayjs()
+				.endOf(
+					<
+						| 'millisecond'
+						| 'second'
+						| 'minute'
+						| 'hour'
+						| 'day'
+						| 'month'
+						| 'year'
+						| 'date'
+						| 'milliseconds'
+						| 'seconds'
+						| 'minutes'
+						| 'hours'
+						| 'days'
+						| 'months'
+						| 'years'
+						| 'dates'
+						| 'd'
+						| 'D'
+						| 'M'
+						| 'y'
+						| 'h'
+						| 'm'
+						| 's'
+						| 'ms'
+						| 'week'
+						| 'weeks'
+						| 'w'
+					>rangeValue,
+				)
+				.unix(),
+			startDate: dayjs()
+				.startOf(
+					<
+						| 'millisecond'
+						| 'second'
+						| 'minute'
+						| 'hour'
+						| 'day'
+						| 'month'
+						| 'year'
+						| 'date'
+						| 'milliseconds'
+						| 'seconds'
+						| 'minutes'
+						| 'hours'
+						| 'days'
+						| 'months'
+						| 'years'
+						| 'dates'
+						| 'd'
+						| 'D'
+						| 'M'
+						| 'y'
+						| 'h'
+						| 'm'
+						| 's'
+						| 'ms'
+						| 'week'
+						| 'weeks'
+						| 'w'
+					>rangeValue,
+				)
+				.unix(),
 			frequency: date,
 		};
 	};

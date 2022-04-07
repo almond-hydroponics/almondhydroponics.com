@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import { LoadingButton } from '@mui/lab';
-import { ModalProps } from '@components/atoms/Modal/interfaces';
+import { ModalProps } from './interfaces';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 	'& .MuDialogContent-root': {

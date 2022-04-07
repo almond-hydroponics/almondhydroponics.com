@@ -5,7 +5,7 @@ interface DividerWithTextProps {
 	children: string | ReactNode;
 }
 
-const DividerWithText = ({ children }: DividerWithTextProps): JSX.Element => {
+const Index = ({ children }: DividerWithTextProps): JSX.Element => {
 	const theme = useTheme();
 
 	return (
@@ -37,4 +37,4 @@ const DividerWithText = ({ children }: DividerWithTextProps): JSX.Element => {
 		</div>
 	);
 };
-export default DividerWithText;
+export default Index;

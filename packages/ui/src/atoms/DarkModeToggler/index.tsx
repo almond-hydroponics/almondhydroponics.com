@@ -43,7 +43,7 @@ export const defaultProperties = {
  *
  * @param {Object} props
  */
-const DarkModeToggler = ({
+const Index = ({
 	size = 20,
 	moonColor = 'white',
 	sunColor = 'black',
@@ -109,4 +109,4 @@ const DarkModeToggler = ({
 	);
 };
 
-export default DarkModeToggler;
+export default Index;
